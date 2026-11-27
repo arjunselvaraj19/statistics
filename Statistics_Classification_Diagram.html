@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Statistics Classification Diagram</title>
+<style>
+:root{--ink:#1d2433;--line:#98a2b3;--bg:#ffffff;
+ --root:#1f2a44;--desc:#2563eb;--desc2:#dbeafe;--inf:#0f766e;--inf2:#ccfbf1;
+ --mean:#7c3aed;--mean2:#ede9fe;--prop:#c2410c;--cat:#be185d;--leaf:#f8fafc;--post:#fef3c7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.3 "Segoe UI",Roboto,Arial,sans-serif;padding:28px}
+h1{margin:0 0 4px;font-size:26px} .tag{color:#475467;margin:0 0 22px}
+.tree{display:inline-block}
+.branch{display:flex;align-items:center}
+.kids{display:flex;flex-direction:column;margin-left:0}
+.kid{position:relative;padding:5px 0 5px 30px}
+.kid::before{content:"";position:absolute;left:0;top:50%;width:30px;border-top:2px solid var(--line)}
+.kid::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--line)}
+.kid:first-child::after{top:50%} .kid:last-child::after{bottom:50%} .kid:only-child::after{display:none}
+.branch>.box{margin-right:0}
+.branch>.kids{position:relative;margin-left:30px}
+.branch>.kids::before{content:"";position:absolute;left:-30px;top:50%;width:30px;border-top:2px solid var(--line)}
+.box{border-radius:10px;padding:8px 12px;border:2px solid var(--line);background:#fff;min-width:150px;max-width:330px}
+.lbl{display:block;font-weight:600} .sub{display:block;font-size:12px;color:#475467;margin-top:2px;font-weight:400}
+.root{background:var(--root);color:#fff;border-color:var(--root);font-size:18px;text-align:center} .root .sub{color:#cbd5e1}
+.desc{background:var(--desc);color:#fff;border-color:var(--desc)} .desc .sub{color:#dbeafe}
+.desc2{background:var(--desc2);border-color:var(--desc)}
+.inf{background:var(--inf);color:#fff;border-color:var(--inf)} .inf .sub{color:#ccfbf1}
+.inf2{background:var(--inf2);border-color:var(--inf)}
+.mean{background:var(--mean);color:#fff;border-color:var(--mean)} .mean .sub{color:#ede9fe}
+.mean2{background:var(--mean2);border-color:var(--mean)}
+.prop{background:var(--prop);color:#fff;border-color:var(--prop)} .prop .sub{color:#fed7aa}
+.cat{background:var(--cat);color:#fff;border-color:var(--cat)} .cat .sub{color:#fbcfe8}
+.leaf{background:var(--leaf);border-color:#cbd5e1;border-radius:8px;font-size:13px}
+.leaf .lbl{font-weight:500} .leaf.post{background:var(--post);border-color:#d97706}
+.legend{margin-top:22px;display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#475467}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+</style></head><body>
+<h1>Statistics: Classification Diagram</h1>
+<p class="tag">Every sub-topic from Population and Sample to the 12-problem test tasklist</p>
+<div class="tree"><div class="branch"><div class="box root"><span class="lbl">STATISTICS</span><span class="sub">Population → Sample</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box desc"><span class="lbl">Descriptive Statistics</span><span class="sub">Summarise the sample (EDA)</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box desc2"><span class="lbl">Measures of Central Tendency</span><span class="sub">Where is the centre?</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Mean</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Median</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Mode</span></div></div></div></div></div></div><div class="kid"><div class="branch"><div class="box desc2"><span class="lbl">Measures of Dispersion</span><span class="sub">How spread out?</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Range</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Variance</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Standard Deviation</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">IQR</span></div></div></div></div></div></div><div class="kid"><div class="branch"><div class="box desc2"><span class="lbl">Normal Distribution</span><span class="sub">Bell curve (Gaussian)</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Empirical rule 68-95-99.7</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Z-score</span></div></div></div></div></div></div><div class="kid"><div class="branch"><div class="box desc2"><span class="lbl">Skewness &amp; Kurtosis</span><span class="sub">Shape of the data</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Skewness: left / right tail</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Kurtosis: tail heaviness</span></div></div></div></div></div></div></div></div></div><div class="kid"><div class="branch"><div class="box inf"><span class="lbl">Inferential Statistics</span><span class="sub">Conclude about the population from a sample</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box inf2"><span class="lbl">Hypothesis Testing Basics</span><span class="sub">Read the question first</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">H0 (no difference) vs H1 (difference)</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Tails: improves → right | reduces → left | differs → two</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Significance level α = 0.05</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">P-value: p &lt; α → reject H0</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">σ known → Z-test | σ unknown → T-test</span></div></div></div></div></div></div><div class="kid"><div class="branch"><div class="box inf2"><span class="lbl">Statistical Tests</span><span class="sub">Choose by data type</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box mean"><span class="lbl">Tests on MEANS</span><span class="sub">numeric data</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box mean2"><span class="lbl">1 group vs known value</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">One-Sample Z-Test (σ known)</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">One-Sample T-Test (σ unknown)</span><span class="sub">stats.ttest_1samp</span></div></div></div></div></div></div><div class="kid"><div class="branch"><div class="box mean2"><span class="lbl">2 independent groups</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Two-Sample Independent T-Test</span><span class="sub">ttest_ind_from_stats · equal_var True = pooled, False = Welch</span></div></div></div></div></div></div><div class="kid"><div class="branch"><div class="box mean2"><span class="lbl">3 or more groups</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">One-Way ANOVA (F-test)</span><span class="sub">anova_generic</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf post"><span class="lbl">If H0 rejected → Tukey HSD post-hoc</span><span class="sub">pairwise_tukeyhsd</span></div></div></div></div></div></div></div></div></div><div class="kid"><div class="branch"><div class="box prop"><span class="lbl">Tests on PROPORTIONS</span><span class="sub">yes/no, % data</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">One-Sample Proportion Z-Test</span><span class="sub">proportions_ztest (1 count)</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Two-Proportion Z-Test</span><span class="sub">proportions_ztest (2 counts)</span></div></div></div></div></div></div><div class="kid"><div class="branch"><div class="box cat"><span class="lbl">Tests on CATEGORIES</span><span class="sub">Chi-Square (χ²)</span></div><div class="kids"><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Test of Independence</span><span class="sub">2 categorical variables · chi2_contingency</span></div></div></div><div class="kid"><div class="branch"><div class="box leaf"><span class="lbl">Goodness of Fit</span><span class="sub">1 variable vs expected · chisquare</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+<div class="legend">
+<span><i style="background:#2563eb"></i>Descriptive</span>
+<span><i style="background:#0f766e"></i>Inferential</span>
+<span><i style="background:#7c3aed"></i>Mean tests</span>
+<span><i style="background:#c2410c"></i>Proportion tests</span>
+<span><i style="background:#be185d"></i>Chi-square tests</span>
+<span><i style="background:#fef3c7;border:1px solid #d97706"></i>Post-hoc step</span>
+</div></body></html>
